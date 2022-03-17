@@ -33,6 +33,7 @@ const fetchProductCardHTML = (handle) => {
   .then((res) => res.text())
   .then((res) => {
     const text = res;
+    console.log(text);
     const parser = new DOMParser();
     const htmlDocument = parser.parseFromString(text, 'text/html');
     const productCard = htmlDocument.documentElement.querySelector(selectors.productCard);
